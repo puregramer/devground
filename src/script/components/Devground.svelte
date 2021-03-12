@@ -1,7 +1,7 @@
 <script>
     import {onMount} from 'svelte';
     import { MaterialApp, AppBar, Button, Icon } from 'svelte-materialify';
-    import { mdiMenu } from '@mdi/js';
+    import { mdiMenu, mdiLanguageJavascript } from '@mdi/js';
     let theme = 'dark';
 
     onMount(() => {
@@ -16,7 +16,7 @@
     <AppBar flat="true">
         <div slot="icon">
             <Button fab depressed>
-                <Icon path={mdiMenu} />
+                <Icon path={mdiLanguageJavascript} />
             </Button>
         </div>
         <span slot="title">Devground</span>
