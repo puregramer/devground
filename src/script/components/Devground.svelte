@@ -38,6 +38,11 @@
         lists[idx].active = !lists[idx].active;
     }
 
+    function openLink(url) {
+        console.log("openLink: ", url);
+        window.open(url);
+    }
+
     onMount(() => {
 
     });
@@ -73,7 +78,7 @@
                         <CardTitle>{list.title}</CardTitle>
                         <CardSubtitle>{list.subTitle}</CardSubtitle>
                         <CardActions>
-                            <Button text>demo</Button>
+                            <Button text on:click={() => openLink(list.url)}>demo</Button>
                             <Button text fab size="small" class="ml-auto" on:click={() =>  toggle(i)}>
                                 <Icon path={mdiChevronDown} rotate={list.active ? 180 : 0} />
                             </Button>

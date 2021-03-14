@@ -3,12 +3,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const mode = process.env.NODE_ENV || "development";
-const prod = mode.trim() === 'production';
+let mode = process.env.NODE_ENV || "development";
+mode = mode.trim();
+const prod = mode === 'production';
 const {scss} = require('svelte-preprocess');
 
 console.log("NODE_ENV: ", mode, prod);
 module.exports = {
+    mode,
     entry: {
         polyfill: [
             'core-js/stable',
@@ -78,7 +80,7 @@ module.exports = {
             }
         ]
     },
-    mode,
+    // mode,
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({template: 'src/index.html'}),
