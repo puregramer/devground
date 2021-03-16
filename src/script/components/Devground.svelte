@@ -5,6 +5,7 @@
     import { mdiMenu, mdiDevTo, mdiChevronDown } from '@mdi/js';
 
     import kitImg from "@assets/kit.PNG";
+    import pdfForPCImg from "@assets/pdfForPC.PNG";
     import pdfViewerImg from "@assets/pdfViewer.PNG";
     import reactEpubViewerImg from "@assets/reactEpubViewer.PNG";
     import flipEpubViewerImg from "@assets/flipEpubViewer.PNG";
@@ -22,9 +23,17 @@
         {
             img: kitImg,
             title: "내가 만든 오디오북 KIT",
-            subTitle: "ePub 컨텐츠 기반 오디오북 제작툴",
+            subTitle: "Electron 기반 ePub 컨텐츠 기반 오디오북 제작툴",
             description: "▶ Features <br> - electron <br> - vue <br> - webpack <br> - nodejs",
             url: "https://www.millie.co.kr/h4/event/myAudioBook/",
+            active: false
+        },
+        {
+            img: pdfForPCImg,
+            title: "Electron PDF Viewer",
+            subTitle: "Electron 기반 WIN/MAC용 PDF 뷰어",
+            description: "▶ Features <br> - electron <br> - vue <br> - pdfjs <br> - webpack <br> - turnjs (migrated ES6) ",
+            url: "https://www.millie.co.kr/customer/app.html?tab=desktop",
             active: false
         },
         {
