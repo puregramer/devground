@@ -3,6 +3,9 @@
     import { MaterialApp, AppBar, Button, Icon, Footer, Menu, ListItem, Card, CardTitle, CardSubtitle, CardActions, Divider, Row, Col, } from 'svelte-materialify';
     import { slide } from 'svelte/transition';
     import { mdiMenu, mdiDevTo, mdiChevronDown } from '@mdi/js';
+    import Prism from 'prismjs';
+
+    Prism.highlightAll();
 
     import kitImg from "@assets/kit.PNG";
     import pdfForPCImg from "@assets/pdfForPC.PNG";

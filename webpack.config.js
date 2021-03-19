@@ -1,12 +1,13 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {scss} = require('svelte-preprocess');
 
 let mode = process.env.NODE_ENV || "development";
 mode = mode.trim();
 const prod = mode === 'production';
-const {scss} = require('svelte-preprocess');
+
 
 console.log("NODE_ENV: ", mode, prod);
 module.exports = {
@@ -43,7 +44,7 @@ module.exports = {
                 exclude: /(node_modules|node_modules(\/|\\)svelte)/,
             },
             {
-                test: /\.svelte$/,
+                test: /\.(svelte)$/,
                 use: [
                     {
                         loader: 'babel-loader',
@@ -56,9 +57,9 @@ module.exports = {
                         options: {
                             emitCss: true,
                             hotReload: true,
-                            preprocess: require('svelte-preprocess')([
+                            preprocess:[
                                 scss()
-                            ])
+                            ]
                         }
                     }
                 ],
