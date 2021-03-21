@@ -2,7 +2,7 @@
     "name": "devground",
     "private": true,
     "version": "1.0.0",
-    "description": "devground page",
+    "description": "using svelte & svelte-materialify page",
     "scripts": {
         "build": "set NODE_ENV=production && webpack",
         "dev": "webpack serve"
