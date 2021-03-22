@@ -9,10 +9,13 @@
 
     1. 개발환경 세팅
     - git repository 생성
-    - 패키지 설치
-    - babel 관련
-    - webpack
-    - 웹팩 설정
+    - webpack 설치 및 설정
+    - babel 관련 설치 및 설정
+        - @babel/core
+        - @babel/preset-env
+        - babel-loader
+    -
+
     - main.js 생성 및 entry 설정
     - style.scss 생성
 
