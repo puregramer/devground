@@ -14,7 +14,7 @@ export const lists = [
     {
         img: kitImg,
         title: "내가 만든 오디오북 KIT",
-        subTitle: "Electron 기반 ePub 컨텐츠 기반 오디오북 제작툴",
+        subTitle: "Electron 기반 ePub 컨텐츠 오디오북 제작툴",
         // description: "▶ Features <br> - electron <br> - vue <br> - webpack <br> - nodejs",
         featureTag: ["electron", "vue", "webpack", "nodejs"],
         url: "https://www.millie.co.kr/h4/event/myAudioBook/",
