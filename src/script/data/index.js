@@ -8,6 +8,7 @@ import musicSyncImg from "@assets/musicSync.PNG";
 import hooksQuizImg from "@assets/hooksQuiz.PNG";
 import webcraftImg from "@assets/webcraft.PNG";
 import platformerImg from "@assets/platformer.PNG";
+import brandImg from "@assets/brand.PNG";
 
 export const lists = [
     {
@@ -26,6 +27,15 @@ export const lists = [
         // description: "▶ Features <br> - electron <br> - vue <br> - pdfjs <br> - webpack <br> - turnjs (migrated ES6) ",
         featureTag: ["electron", "vue", "pdfjs", "webpack", "turnjs(migrated ES6)"],
         url: "https://www.millie.co.kr/customer/app.html?tab=desktop",
+        active: false
+    },
+    {
+        img: brandImg,
+        title: "브랜드 페이지",
+        subTitle: "인터렉션 브랜드 페이지",
+        // description: "▶ Features <br> - electron <br> - vue <br> - webpack <br> - nodejs",
+        featureTag: ["ES6", "webpack", "animejs", "lax.js"],
+        url: "https://www.devground.co.kr/brand/",
         active: false
     },
     {
