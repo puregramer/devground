@@ -35,7 +35,7 @@
 <div class="text-body-2 ml-3 mb-1">· Storage class 생성 (localStorage 생성/저장/삭제 담당)</div>
 <pre class="line-numbers" data-src="https://puregramer.github.io/todo-list/src/script/Storage.js"></pre>
 <h4 class="text-subtitle-1">3. ToDo list 실행</h4>
-<iframe src="https://puregramer.github.io/todo-list/dist/" ></iframe>
+<iframe src="https://puregramer.github.io/todo-list/dist/" title="todo list demo"></iframe>
 <br>
 <br>
 <br>
