@@ -86,8 +86,8 @@
                                 <span style="margin-left:5px;">Company Projects</span>
                             </div>
                             <Divider/>
-                        {:else if i === 8}
-                            <div class="text-subtitle-1" style="display:flex; margin-bottom:7px;">
+                        {:else if i === 9}
+                            <div class="text-subtitle-1" style="display:flex; margin-top:30px; margin-bottom:7px;">
                                 <Icon path={mdiToyBrick}/>
                                 <span style="margin-left:5px;">Toy Projects</span>
                             </div>

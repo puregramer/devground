@@ -16,18 +16,18 @@ export const lists = [
         title: "내가 만든 오디오북 KIT",
         subTitle: "Electron 기반 ePub 컨텐츠 오디오북 제작툴",
         // description: "▶ Features <br> - electron <br> - vue <br> - webpack <br> - nodejs",
-        featureTag: ["electron", "vue", "webpack", "nodejs"],
+        featureTag: ["electron", "vuejs", "webpack", "nodejs"],
         url: "https://www.millie.co.kr/h4/event/myAudioBook/",
-        active: false
+        active: true
     },
     {
         img: pdfForPCImg,
         title: "Electron PDF Viewer",
         subTitle: "Electron 기반 WIN/MAC용 PDF 뷰어",
         // description: "▶ Features <br> - electron <br> - vue <br> - pdfjs <br> - webpack <br> - turnjs (migrated ES6) ",
-        featureTag: ["electron", "vue", "pdfjs", "webpack", "turnjs(migrated ES6)"],
+        featureTag: ["electron", "vuejs", "pdfjs", "webpack", "turnjs(migrated ES6)"],
         url: "https://www.millie.co.kr/customer/app.html?tab=desktop",
-        active: false
+        active: true
     },
     {
         img: brandImg,
@@ -36,7 +36,7 @@ export const lists = [
         // description: "▶ Features <br> - electron <br> - vue <br> - webpack <br> - nodejs",
         featureTag: ["ES6", "webpack", "animejs", "lax.js"],
         url: "https://www.devground.co.kr/brand/",
-        active: false
+        active: true
     },
     {
         img: pdfViewerImg,
@@ -45,7 +45,7 @@ export const lists = [
         // description: "▶ Features <br> - ES6+ <br> - pdfjs <br> - webpack <br> - turnjs (migrated ES6) ",
         featureTag: ["ES6+", "pdfjs", "webpack", "turnjs(migrated ES6)"],
         url: "https://puregramer.github.io/pdfViewer/dist/",
-        active: false
+        active: true
     },
     {
         img: reactEpubViewerImg,
@@ -55,7 +55,7 @@ export const lists = [
         featureTag: ["react", "redux", "greenSock animation platform(gsap)", "webpack"],
         url: "https://puregramer.github.io/react-epub3-viewer/dist/",
         github: "https://github.com/puregramer/react-epub3-viewer",
-        active: false
+        active: true
     },
     {
         img: flipEpubViewerImg,
@@ -65,7 +65,7 @@ export const lists = [
         featureTag: ["ES6", "webpack", "turnjs(migrated ES6)"],
         url: "https://puregramer.github.io/es6-flip-epub3-viewer/dist/",
         github: "https://github.com/puregramer/es6-flip-epub3-viewer",
-        active: false
+        active: true
     },
     {
         img: wordRacingImg,
@@ -75,7 +75,7 @@ export const lists = [
         featureTag: ["react", "redux", "greenSock animation platform(gsap)", "react-responsive-spritesheet", "webpack"],
         url: "https://puregramer.github.io/react-racingWordGame/dist/",
         github: "https://github.com/puregramer/react-racingWordGame",
-        active: false
+        active: true
     },
     {
         img: musicSyncImg,
@@ -85,7 +85,7 @@ export const lists = [
         featureTag: ["ES6", "webpack"],
         url: "https://puregramer.github.io/svgMusicNoteSync/test/1/02_greensea/02_greensea.html",
         github: "https://github.com/puregramer/svgMusicNoteSync",
-        active: false
+        active: true
     },
     {
         img: hooksQuizImg,
@@ -95,7 +95,7 @@ export const lists = [
         featureTag: ["react", "react hooks", "greenSock animation platform(gsap)", "react-responsive-spritesheet", "webpack"],
         url: "https://puregramer.github.io/react-hooks-quizGame/",
         github: "https://github.com/puregramer/react-hooks-quizGame",
-        active: false
+        active: true
     },
     {
         img: webcraftImg,
@@ -106,7 +106,7 @@ export const lists = [
         description: "마우스 좌 클릭으로 이동, 적 캐릭터 마우스 좌 클릭으로 공격",
         url: "https://puregramer.github.io/Webcraft/",
         github: "https://github.com/puregramer/Webcraft",
-        active: false
+        active: true
     },
     {
         img: platformerImg,
@@ -117,7 +117,7 @@ export const lists = [
         description: "방향키로 이동이 가능하며, q(대쉬), w(점프), e(공격) 버튼",
         url: "https://puregramer.github.io/WebAndDragon/dist/",
         github: "https://github.com/puregramer/WebAndDragon",
-        active: false
+        active: true
     },
 
 ];
@@ -125,14 +125,23 @@ export const lists = [
 export const chartData = {
     "chart": {
         "caption": "Skill Stack",
-        "subCaption": "주로 사용하는 스킬들",
-        "showValues": "1",
+        "subCaption": "프로젝트에 사용했었던 스킬들",
+        "subcaptionFontSize": "12",
+        "subcaptionFontColor": "555",
+        "captionFontSize": "15",
+        "captionFontColor": "777",
+        "captionFontBold": "1",
+        "showValues": "0",
         "showPercentInTooltip": "0",
-        "numberPrefix": "$",
+        // "numbersuffix": "%",
         "enableMultiSlicing": "1",
         "theme": "candy",
         "bgColor": "#000",
-        "bgAlpha": "90"
+        "bgAlpha": "90",
+        "labelFontColor": "fff",
+        "labelFontSize": "11",
+        "labelFontBold": "1",
+        "labelAlpha": "70"
     },
     "data": [
         {
@@ -140,8 +149,16 @@ export const chartData = {
             "value": "50"
         },
         {
+            "label": "ES5",
+            "value": "10"
+        },
+        {
             "label": "Nodejs",
             "value": "20"
+        },
+        {
+            "label": "ASP",
+            "value": "10"
         },
         {
             "label": "Vuejs",
@@ -149,6 +166,10 @@ export const chartData = {
         },
         {
             "label": "React",
+            "value": "15"
+        },
+        {
+            "label": "React Hooks",
             "value": "10"
         },
         {
@@ -157,11 +178,87 @@ export const chartData = {
         },
         {
             "label": "Angularjs 1",
+            "value": "5"
+        },
+        {
+            "label": "Svelte",
+            "value": "15"
+        },
+        {
+            "label": "Gulp",
             "value": "10"
         },
         {
-            "label": "",
+            "label": "Webpack",
+            "value": "20"
+        },
+        {
+            "label": "MongoDB",
             "value": "5"
+        },
+        {
+            "label": "NeDB",
+            "value": "15"
+        },
+        {
+            "label": "MSSQL",
+            "value": "10"
+        }
+    ]
+};
+
+export const chartLearningData = {
+    "chart": {
+        "caption": "Learing Skills",
+        "subCaption": "현재 습득중인 스킬들",
+        "subcaptionFontSize": "12",
+        "subcaptionFontColor": "555",
+        "captionFontSize": "15",
+        "captionFontColor": "777",
+        "captionFontBold": "1",
+        "showValues": "0",
+        "showPercentInTooltip": "0",
+        "enableMultiSlicing": "1",
+        "theme": "candy",
+        "bgColor": "#000",
+        "bgAlpha": "90",
+        "labelFontColor": "fff",
+        "labelFontSize": "11",
+        "labelFontBold": "1",
+        "labelAlpha": "70"
+    },
+    "data": [
+        {
+            "label": "Svelte",
+            "value": "30"
+        },
+        {
+            "label": "React Native",
+            "value": "30"
+        },
+        {
+            "label": "GraphQL",
+            "value": "25"
+        },
+        {
+            "label": "Apollo",
+            "value": "10"
+        },
+        {
+            "label": "Prisma",
+            "value": "15"
+        },
+        {
+            "label": "Expo",
+            "value": "10"
+        },
+        {
+            "label": "PostgreSQL",
+            "value": "5"
+        },
+        {
+            "label": "TypeScript",
+            "value": "10"
         }
     ]
 };
