@@ -61,11 +61,11 @@
     </AppBar>
     <Window {value} class="ma-4">
         <WindowItem>
-            <div class="text-subtitle-2" style="display:flex; margin-bottom:7px;">
+            <!--<div class="text-subtitle-2" style="display:flex; margin-bottom:7px;">
                 <Icon path={mdiChartArc}/>
-                <span style="margin-left:5px;">Skills</span>
+                <span style="margin-left:5px;">Skill Stack</span>
             </div>
-            <Divider/>
+            <Divider/>-->
            <Status/>
         </WindowItem>
         <WindowItem>

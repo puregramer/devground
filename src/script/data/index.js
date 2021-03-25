@@ -122,34 +122,46 @@ export const lists = [
 
 ];
 
-export const chartData ={
+export const chartData = {
     "chart": {
         "caption": "Skill Stack",
-        "subCaption" : "For a net-worth of $1M",
-        "showValues":"1",
-        "showPercentInTooltip" : "0",
-        "numberPrefix" : "$",
-        "enableMultiSlicing":"1",
+        "subCaption": "주로 사용하는 스킬들",
+        "showValues": "1",
+        "showPercentInTooltip": "0",
+        "numberPrefix": "$",
+        "enableMultiSlicing": "1",
         "theme": "candy",
         "bgColor": "#000",
         "bgAlpha": "90"
     },
     "data": [
         {
-            "label": "Equity",
-            "value": "300000"
-        }, {
-            "label": "Debt",
-            "value": "230000"
-        }, {
-            "label": "Bullion",
-            "value": "180000"
-        }, {
-            "label": "Real-estate",
-            "value": "270000"
-        }, {
-            "label": "Insurance",
-            "value": "20000"
+            "label": "ES6+",
+            "value": "50"
+        },
+        {
+            "label": "Nodejs",
+            "value": "20"
+        },
+        {
+            "label": "Vuejs",
+            "value": "30"
+        },
+        {
+            "label": "React",
+            "value": "10"
+        },
+        {
+            "label": "Electron",
+            "value": "20"
+        },
+        {
+            "label": "Angularjs 1",
+            "value": "10"
+        },
+        {
+            "label": "",
+            "value": "5"
         }
     ]
 };
