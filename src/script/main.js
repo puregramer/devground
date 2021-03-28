@@ -2,13 +2,14 @@
     create by Charlie 20210309
 */
 
-import Devground from "@components/Devground.svelte";
+import Intro from "@components/Intro.svelte";
 import "@style/style.css";
 
-const DevgroundInstance = new Devground({
+const introInstance = new Intro({
     target: document.getElementById("appRoot"),
     props: {}
 });
-export default DevgroundInstance;
+
+export default introInstance;
 
 

@@ -10,51 +10,60 @@
     import { onMount } from 'svelte';
     import Star from './Star.svelte';
 
-    const app = new PIXI.Application()
+    export let warp;
+    // console.log("warp: ", warp);
+    $: console.log("watch warp: ", warp);
 
-    const starAmount = 1000
-    let cameraZ = 0
-    const speed = 0.025
+    const app = new PIXI.Application();
 
-    let stars = Array(starAmount).fill(null)
+    const starAmount = 1000;
+    let cameraZ = 0;
+    const speed = 0.025;
+    // const speed = 1;
+
+    let warpSpeed = 0;
+
+
+    let stars = Array(starAmount).fill(null);
 
     onMount(() => {
         function tick(delta) {
-            cameraZ += delta * 10 * speed
+            warpSpeed += (warp - warpSpeed) / 20;
+            cameraZ += delta * 10 * (speed + warpSpeed);
         }
 
-        app.ticker.add(tick)
-        return () => app.ticker.remove(tick)
-    })
+        app.ticker.add(tick);
+        return () => app.ticker.remove(tick);
+    });
 
-    function resize(node: HTMLElement) {
+    function resize(node) {
         function handler() {
-            app.renderer.resize(node.offsetWidth, node.offsetHeight)
+            app.renderer.resize(node.offsetWidth, node.offsetHeight);
         }
-        window.addEventListener('resize', handler)
+        window.addEventListener('resize', handler);
         setTimeout(() => {
-            handler()
+            handler();
         })
         return {
             destroy: () => {
-                window.removeEventListener('resize', handler)
+                window.removeEventListener('resize', handler);
             },
         }
     }
 </script>
 
-<style>
+<div class="wrapper" use:resize>
+    <Pixi {app}>
+        {#each stars as star, i}
+            <Star {app} {cameraZ} {warpSpeed}/>
+        {/each}
+    </Pixi>
+</div>
+
+<style type="text/scss">
     .wrapper {
         width: 100%;
         height: 100%;
         background: black;
     }
 </style>
-
-<div class="wrapper" use:resize>
-    <Pixi {app}>
-        {#each stars as star, i}
-            <Star {app} {cameraZ} />
-        {/each}
-    </Pixi>
-</div>

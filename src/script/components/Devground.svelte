@@ -13,7 +13,8 @@
     import CodeStyle from "./CodeStyle.svelte";
     import Status from "./Status.svelte";
 
-    let theme = 'dark';
+    export let visible;
+    let theme = 'dark black';
     let value = 0;
 
     function toggle(idx) {
@@ -31,6 +32,8 @@
     });
 
 </script>
+
+<div class="devground-box" style={visible ? 'display:block;': 'display:none;'}>
 
 <MaterialApp {theme}>
     <AppBar flat="true">
@@ -61,11 +64,6 @@
     </AppBar>
     <Window {value} class="ma-4">
         <WindowItem>
-            <!--<div class="text-subtitle-2" style="display:flex; margin-bottom:7px;">
-                <Icon path={mdiChartArc}/>
-                <span style="margin-left:5px;">Skill Stack</span>
-            </div>
-            <Divider/>-->
            <Status/>
         </WindowItem>
         <WindowItem>
@@ -139,13 +137,13 @@
         </WindowItem>
     </Window>
 
-    <Footer class="justify-center pa-2" absolute>
+    <Footer class="justify-center pa-2">
        2021 <Icon path={mdiCopyright} size={15}></Icon> puregramer@gmail.com
     </Footer>
 </MaterialApp>
-
+</div>
 
 <style type="text/scss">
-
-
+    .devground-box {
+    }
 </style>
