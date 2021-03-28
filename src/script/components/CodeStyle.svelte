@@ -1,7 +1,9 @@
 <script>
+    import {onMount} from 'svelte';
     import Prism from 'prismjs';
-    Prism.highlightAll();
-
+    onMount(() => {
+        Prism.highlightAll();
+    });
 
 </script>
 <br>
